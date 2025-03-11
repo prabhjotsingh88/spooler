@@ -1,0 +1,9 @@
+---
+
+- name:   Spooler management example
+  hosts: all
+  tasks:
+    - name: Ensure that the spooler service is started
+      ansible.windows.win_service:
+        name: spooler
+        state: started
